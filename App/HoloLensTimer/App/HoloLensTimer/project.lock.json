@@ -15893,19 +15893,19 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\lance\\Downloads\\App\\HoloLensTimer\\App\\HoloLensTimer\\HoloLensTimer.csproj",
+      "projectUniqueName": "C:\\Users\\lance\\Documents\\GitHubProjects\\444-hololens\\App\\HoloLensTimer\\App\\HoloLensTimer\\HoloLensTimer.csproj",
       "projectName": "HoloLensTimer",
-      "projectPath": "C:\\Users\\lance\\Downloads\\App\\HoloLensTimer\\App\\HoloLensTimer\\HoloLensTimer.csproj",
-      "projectJsonPath": "C:\\Users\\lance\\Downloads\\App\\HoloLensTimer\\App\\HoloLensTimer\\project.json",
+      "projectPath": "C:\\Users\\lance\\Documents\\GitHubProjects\\444-hololens\\App\\HoloLensTimer\\App\\HoloLensTimer\\HoloLensTimer.csproj",
+      "projectJsonPath": "C:\\Users\\lance\\Documents\\GitHubProjects\\444-hololens\\App\\HoloLensTimer\\App\\HoloLensTimer\\project.json",
       "projectStyle": "ProjectJson",
       "frameworks": {
         "uap10.0": {
           "projectReferences": {
-            "C:\\Users\\lance\\Downloads\\App\\HoloLensTimer\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj": {
-              "projectPath": "C:\\Users\\lance\\Downloads\\App\\HoloLensTimer\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj"
+            "C:\\Users\\lance\\Documents\\GitHubProjects\\444-hololens\\App\\HoloLensTimer\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj": {
+              "projectPath": "C:\\Users\\lance\\Documents\\GitHubProjects\\444-hololens\\App\\HoloLensTimer\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj"
             },
-            "C:\\Users\\lance\\Downloads\\App\\HoloLensTimer\\App\\GeneratedProjects\\UWP\\Assembly-CSharp-firstpass\\Assembly-CSharp-firstpass.csproj": {
-              "projectPath": "C:\\Users\\lance\\Downloads\\App\\HoloLensTimer\\App\\GeneratedProjects\\UWP\\Assembly-CSharp-firstpass\\Assembly-CSharp-firstpass.csproj"
+            "C:\\Users\\lance\\Documents\\GitHubProjects\\444-hololens\\App\\HoloLensTimer\\App\\GeneratedProjects\\UWP\\Assembly-CSharp-firstpass\\Assembly-CSharp-firstpass.csproj": {
+              "projectPath": "C:\\Users\\lance\\Documents\\GitHubProjects\\444-hololens\\App\\HoloLensTimer\\App\\GeneratedProjects\\UWP\\Assembly-CSharp-firstpass\\Assembly-CSharp-firstpass.csproj"
             }
           }
         }

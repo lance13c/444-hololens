@@ -5,12 +5,12 @@
 # Write a line equal to 'overwrite-all' (without quotes) to overwrite everything (preserved accross builds)
 # Write a line equal to 'keep-all' (without quotes) to keep files regardless their modification (preserved accross builds)
 # Default behavior is to never overwrite files
-HoloLensTimer.sln: modified
+HoloLensTimer.sln: AF6A17DF8645976435CEA0FBF28C8DD4
 GeneratedProjects\UWP\Assembly-CSharp\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
 GeneratedProjects\UWP\Assembly-CSharp-firstpass\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
 HoloLensTimer\App.cs: 642579818DABF63422DAECD6CD0BEF31
-HoloLensTimer\HoloLensTimer.csproj: 82C9CC7B3168988DDBD67902C97EB3F8
-HoloLensTimer\HoloLensTimer.csproj.user: modified
+HoloLensTimer\HoloLensTimer.csproj: 102273AA4A8B64727C795394D250DE13
+HoloLensTimer\HoloLensTimer.csproj.user: BEFB8AC4886C4CFDD3C68445D6F19B04
 HoloLensTimer\Package.appxmanifest: E29709F5FC1F89D820EDA3AA749C7909
 HoloLensTimer\project.json: 1D02BC64BAC0D041019673A1C4C51737
 HoloLensTimer\Assets\SplashScreen.scale-200.png: 60618416282ED104FD1473935716045D
