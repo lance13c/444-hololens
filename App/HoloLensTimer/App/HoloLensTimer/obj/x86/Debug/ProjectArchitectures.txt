@@ -1,0 +1,4 @@
+C:\Users\lance\Downloads\App\HoloLensTimer\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86
+C:\Users\lance\Downloads\App\HoloLensTimer\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
+C:\Users\lance\Downloads\App\HoloLensTimer\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
+C:\Users\lance\Downloads\App\HoloLensTimer\App\HoloLensTimer\HoloLensTimer.csproj;x86
