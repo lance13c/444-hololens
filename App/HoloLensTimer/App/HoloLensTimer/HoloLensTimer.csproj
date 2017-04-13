@@ -214,12 +214,12 @@
 
   <ItemGroup>
     <ProjectReference Include="C:\Users\lance\Documents\GitHubProjects\444-hololens\App\HoloLensTimer\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj">
-      <Project>{7c56d947-3466-4fc7-95f0-eefa587dde76}</Project>
+      <Project>{a099b426-bf77-4dc6-bcb1-a9b522310410}</Project>
       <Name>Assembly-CSharp</Name>
       <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="C:\Users\lance\Documents\GitHubProjects\444-hololens\App\HoloLensTimer\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj">
-      <Project>{8c2d2c4d-4d85-44e4-b846-06f1c3d71dda}</Project>
+      <Project>{bc1c72db-1e07-4b8f-b3f6-7701ddae6a62}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
       <Private>False</Private>
     </ProjectReference>

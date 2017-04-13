@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class ResetButton : MonoBehaviour
 {
-    // Called by GazeGestureManager when the user performs a Select gesture
+    private Object holoTimer;
+
+    void Start()
+    {
+        Debug.Log("test");
+        GameObject timer = GameObject.Find("TimeText");
+        holoTimer = timer.GetComponent<HoloTimer>();
+
+    }
+
     void OnSelect()
     {
-        // If the sphere has no Rigidbody component, add one to enable physics.
-        if (!this.GetComponent<Rigidbody>())
-        {
-            var rigidbody = this.gameObject.AddComponent<Rigidbody>();
-            rigidbody.collisionDetectionMode = CollisionDetectionMode.Continuous;
-        }
+        Debug.Log("abc");
+        HoloTimer timer = (HoloTimer)holoTimer;
+        timer.ResetTime();
     }
 }

@@ -5,16 +5,26 @@ using UnityEngine;
 public class HoloTimer : MonoBehaviour {
     private int previousTime = 0;
     private bool countDown = false;
-    private int timeSec = 00;        // Time seconds
-    private int timeMin = 5;        // Time minutes
+    private bool gatherText = true;   // Boolean trigger to tell if text gathering should be allowed 
+    private int timeSec = 00;         // Time seconds
+    private int timeMin = 5;          // Time minutes
+    private int defaultSec = 00;
+    private int defaultMin = 5;
     private string inputText = "";    // The time text represented: 0011, 00 = minutes, 11 = seconds
     private string displayText = "";  // The time text that will be displayed
+
+    UnityEngine.TouchScreenKeyboard keyboard;
+    public static string keyboardText = "";
+
+
     private int inputTextIndex = 0;
     const int MAX_INPUT_LENGTH = 4;
 
     // Use this for initialization
     void Start () {
         GetComponent<TextMesh>().text = this.GetTime();
+
+        //keyboard = TouchScreenKeyboard.Open("", TouchScreenKeyboardType.Default, false, false, false, false);
     }
 	
 	// Update is called once per frame
@@ -28,6 +38,13 @@ public class HoloTimer : MonoBehaviour {
          this.decrementTime();
          //If countDown True -> decrement timer
         }
+
+
+        // Text Insertion
+
+        //this.HandleText(this.inputText);       // Gets text from keyboard
+        //this.SetTimer("1234");
+
     }
 
     /*
@@ -58,7 +75,7 @@ public class HoloTimer : MonoBehaviour {
     // Gets time in string format
     string GetTime()
     {
-        return this.timeMin.ToString() + ":" + this.timeSec.ToString();
+        return this.timeMin.ToString("D2") + ":" + this.timeSec.ToString("D2");
     }
 
     private void DrawTime()
@@ -98,71 +115,66 @@ public class HoloTimer : MonoBehaviour {
 
         this.timeMin = min;
         this.timeSec = sec;
+        this.defaultMin = min;
+        this.defaultSec = sec;
         DrawTime();
     }
 
     // Must submit a time with a length of at least 4 characters.
     public void SetTimer(string time)
     {
-
+        // On click add to string that keeps displaying;
         
-        if (time.Length >= MAX_INPUT_LENGTH)
-        {
+        //if (time.Length >= MAX_INPUT_LENGTH)
+        //{
             this.countDown = false; // Stops it from counting down when changing the value.
 
             int minutes = int.Parse(time.Substring(0, 2));
             int seconds = int.Parse(time.Substring(2, 2));
             this.timeMin = minutes;
             this.timeSec = seconds;
+            this.defaultMin = minutes;
+            this.defaultSec = seconds;
             DrawTime();
-        } else
-        {
+        //} else
+        //{
             Debug.Log("Time not Long enough");
-        }
+        //}
         
     }
 
-    private void HandleText()
+    // Resets the timer to the default time.
+    public void ResetTime()
+    {
+        this.countDown = false;
+
+        this.timeMin = this.defaultMin;
+        this.timeSec = this.defaultSec;
+        DrawTime();
+    }
+
+    // Adds and removes digits from inserted text
+    private string HandleText(string text)
     {
         foreach (char c in Input.inputString)
         {
+            Debug.Log("test");
+            Debug.Log(c);
             char digit = '@';
-            if (char.IsDigit(c))
+            //if (char.IsDigit(c))
+            if (c == "\n"[0] || c == "\r"[0])
             {
                 digit = c;
-            };
-
-
-
-            if (digit != '@')
-            {
-                this.inputText += digit;
-
-                this.SetTimer(inputText);
-
-                // InputTextIndex handler
-                
-                if (this.inputTextIndex > MAX_INPUT_LENGTH)
+                if (text.Length >= 4)
                 {
-
-                    //this.inputText.Insert(inputTextIndex, int.Parse());
-                    this.inputText.Remove(inputTextIndex, 1);
-                    
-
-                    this.inputTextIndex += 1;
+                    text = "";
                 }
 
-
-            }
-            //if (c == "\b"[0])
-            //    if (this.inputText.Length != 0)
-            //        this.inputText = this.inputText.Substring(0, this.inputText.Length - 1);
-
-            //    else
-            //    if (c == "\n"[0] || c == "\r"[0])
-            //        print("User entered their name: " + gt.text);
-            //    else
-            //        gt.text += c;
+                text += digit.ToString();
+            };
+            this.inputText = text.PadLeft(4);
+            this.SetTimer(this.inputText);
         }
+        return this.inputText;
     }
 }
